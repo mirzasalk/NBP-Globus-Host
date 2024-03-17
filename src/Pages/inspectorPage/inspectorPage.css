@@ -1,0 +1,116 @@
+#inspectorPageMain {
+  width: 100%;
+  height: 86.5vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inspectorPageMainCenterDiv {
+  width: 50%;
+  height: 80vh;
+  background-color: #097c91;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.logoInspectorPage {
+  width: 7em;
+  margin-top: 1em;
+}
+.buttonsLine {
+  width: 90%;
+  margin-top: 1em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.buttonOnLine {
+  margin-right: 1em;
+}
+.buttonOnLine:hover {
+  color: rgb(90, 203, 184);
+  cursor: pointer;
+}
+.checkTheTicketDiv {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 3em;
+}
+.MyIssuedFinesDiv {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.IssueAFineDiv {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.inputForTicketId {
+  width: 55%;
+  height: 6vh;
+  background-color: white;
+  color: black;
+  padding-left: 1em;
+}
+.checkButton {
+  margin-top: 2em;
+}
+.writePenaltyMainDiv {
+  position: absolute;
+  width: 100%;
+  height: 87vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.writePenaltyCenterDiv {
+  background-color: #097c91;
+  width: 50%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.xdiv {
+  width: 90%;
+  margin-top: 0.5em;
+  font-size: larger;
+}
+.xdiv:hover {
+  cursor: pointer;
+}
+.MyIssuedFinesScroll {
+  background-color: white;
+  width: 90%;
+  height: 50vh;
+  margin-top: 2em;
+  overflow-y: scroll; 
+  padding: 1em;
+  overflow-x: hidden;
+}
+.penaltyDiv {
+  width: 90%;
+  height: 5vh;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  color: black;
+}

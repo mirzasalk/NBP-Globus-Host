@@ -1,0 +1,118 @@
+#RegisterMain {
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 80vh;
+  background-color: white;
+}
+.center-div {
+  margin-bottom: 1em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 125vh;
+  background: #097c91;
+  padding-bottom: 1em;
+}
+
+.center-div button {
+  background-color: rgb(43, 41, 41);
+  width: 50%;
+  height: 3em;
+  border-radius: 3px;
+  margin-top: 1em;
+}
+.center-div button:hover {
+  background-color: rgb(90, 203, 184);
+}
+.userIcon {
+  width: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.inputDiv {
+  width: 80%;
+  height: 4.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+.inputHelperDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.inputDiv input {
+  width: 85%;
+  height: 2.5em;
+  background-color: white;
+  color: black;
+}
+.error {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: red;
+}
+.inputDiv label {
+  display: flex;
+  justify-content: start;
+  height: 2.5em;
+
+  align-items: center;
+  width: 15%;
+}
+.radioBtnDiv {
+  margin-top: 1em;
+  width: 85%;
+  height: 4.5em;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+}
+.radioBtnHelperDiv {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+.radioBtnDiv input {
+  width: 1.5em;
+}
+.radioBtnDiv label {
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  .center-div {
+    margin-bottom: 1em;
+    margin-top: 2em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 90vh;
+    background: #097c91;
+    padding-bottom: 1em;
+  }
+  .inputDiv {
+    width: 85%;
+  }
+  .inputDiv input {
+    width: 65%;
+  }
+  .inputDiv label {
+    width: 29%;
+  }
+}

@@ -1,0 +1,285 @@
+#homeMain {
+  background-color: aliceblue;
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.viewForPassenger {
+  width: 70%;
+  height: 75vh;
+  background-color: #097c91;
+  margin-top: 1em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1em;
+}
+.logoForPassengerView {
+  width: 7em;
+}
+.buttonsDiv {
+  width: 90%;
+  height: 3em;
+  border-bottom: 2px solid aliceblue;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+.DivForchagePassengersView {
+  margin-right: 1em;
+}
+.DivForchagePassengersView:hover {
+  cursor: pointer;
+  color: rgb(90, 203, 184);
+}
+.mainForPassengerView {
+  width: 90%;
+  height: 46vh;
+}
+.byTicketInputDiv {
+  width: 100%;
+
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.linesDiv {
+  width: 50%;
+  background-color: #097c91;
+  display: flex;
+  margin-top: 0.3em;
+}
+.linesDivDropDown {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 17vh;
+
+  margin-left: 1em;
+}
+.linesScrollList {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+.chosenLineDiv {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding-left: 0.5em;
+}
+.chosenLineDiv:hover {
+  cursor: pointer;
+  background-color: #097c91;
+  color: white;
+}
+.divInScroll {
+  border-bottom: 0.5px solid black;
+  color: black;
+}
+.divInScroll:hover {
+  background-color: #097c91;
+  cursor: pointer;
+  color: white;
+}
+.chosenStationDiv {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding-left: 0.5em;
+}
+.chosenStationDiv:hover {
+  background-color: #097c91;
+  color: white;
+  cursor: pointer;
+}
+.divForStationsDropdowns {
+  display: flex;
+  width: 105%;
+  height: fit-content;
+}
+.stationsDiv {
+  width: 50%;
+
+  display: flex;
+}
+.stationsDiv {
+  width: 50%;
+  background-color: #097c91;
+  display: flex;
+  margin-top: 0.3em;
+}
+.stationDivDropDown {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 17vh;
+}
+.ticketTypeDiv {
+  width: 50%;
+  background-color: #097c91;
+  display: flex;
+  margin-top: 0.3em;
+}
+.tickeTypeAndLinesDiv {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+.byTicketBtn {
+  margin-top: 1em;
+}
+.divForbuyingTicket {
+  position: absolute;
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.centerDivForbuyingTicket {
+  background-color: #097c91;
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.Xdiv {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 0.5em 1.5em 0 0;
+}
+.Xdiv:hover {
+  cursor: pointer;
+}
+.MyTicketDiv {
+  width: 100%;
+  height: 40vh;
+  margin-top: 1em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+
+.myTicketField {
+  box-shadow: rgba(41, 255, 3, 0.25) 0px 54px 55px, rgba(41, 255, 3, 0.25) 0px -12px 30px, rgba(41, 255, 3, 0.25) 0px 4px 6px, rgba(41, 255, 3, 0.25) 0px 12px 13px,rgba(41, 255, 3, 0.25) 0px -3px 5px;
+  margin: .5em;
+  width: 95%;
+  height: 13vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em 1em 1em;
+  margin-top: 0.3em;
+}
+.myPendingTicketField{
+  box-shadow: rgb(0, 0, 0) 0px 3px 8px; width: 95%;
+  margin: .5em;
+  height: 13vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em 1em 1em;
+  margin-top: 0.3em;
+  }
+
+.myUnactiveTicketField {
+  box-shadow: rgb(248, 5, 5) 0px 3px 8px; width: 95%;
+  margin: .5em;
+  height: 13vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em 1em 1em;
+  margin-top: 0.3em;
+}
+.ticketInfoDiv {
+  width: 100%;
+  width: 95%;
+  height: 5vh;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  margin-top: 0.3em;
+}
+.divForCredi {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.creditDiv {
+  border: 1px solid white;
+  padding: 0.5em 1em;
+}
+.creditDiv:hover {
+  background-color: white;
+  color: #097c91;
+  cursor: pointer;
+}
+.addingCreditDiv {
+  position: absolute;
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.addingCreditCenterDiv {
+  background-color: #097c91;
+  width: 40%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.addingCreditCenterDiv form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+}
+.addingCreditCenterDiv form input {
+  width: 50%;
+  height: 5vh;
+  background-color: white;
+  color: black;
+}
+.xdiv {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.xdiv div:hover {
+  cursor: pointer;
+}

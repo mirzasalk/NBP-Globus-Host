@@ -1,0 +1,95 @@
+#LogInMain {
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 89vh;
+  background-color: white;
+}
+.center-LogIn-div {
+  margin-bottom: 1em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 50vh;
+  background: #097c91;
+}
+
+.center-LogIn-div button {
+  background-color: rgb(43, 41, 41);
+  width: 50%;
+  height: 3em;
+  border-radius: 3px;
+  margin-top: 1em;
+}
+.center-LogIn-div button:hover {
+  background-color: rgb(90, 203, 184);
+}
+
+.userIcon {
+  width: 6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.logInInputDiv {
+  width: 80%;
+  height: 4.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+.logInInputHelperDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.logInInputDiv input {
+  width: 85%;
+  height: 2.5em;
+  background-color: white;
+  color: black;
+}
+.error {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  color: red;
+}
+.logInInputDiv label {
+  display: flex;
+  justify-content: start;
+  height: 2.5em;
+
+  align-items: center;
+  width: 15%;
+}
+
+@media screen and (max-width: 450px) {
+  .center-LogIn-div {
+    margin-bottom: 1em;
+    margin-top: 2em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 45vh;
+    background: #097c91;
+  }
+  .logInInputDiv {
+    width: 85%;
+  }
+  .logInInputDiv input {
+    width: 65%;
+  }
+  .logInInputDiv label {
+    width: 29%;
+  }
+}

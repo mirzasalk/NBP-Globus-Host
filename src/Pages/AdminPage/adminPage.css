@@ -1,0 +1,392 @@
+#adminPageMain {
+  width: 100%;
+  height: 86.5vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminPageMainCenterDiv {
+  width: 80%;
+  height: 80vh;
+  background-color: #097c91;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.logoAdminPage {
+  width: 7em;
+  margin-top: 1em;
+}
+.buttonsLine {
+  width: 90%;
+  margin-top: 1em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+.buttonOnLine {
+  margin-right: 1em;
+}
+.buttonOnLine:hover {
+  color: rgb(90, 203, 184);
+  cursor: pointer;
+}
+
+.ApproveTicketsDiv {
+  width: 90%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.xdiv {
+  width: 90%;
+  margin-top: 0.5em;
+  font-size: larger;
+}
+.xdiv:hover {
+  cursor: pointer;
+}
+
+.ApproveTicketsDivScroll {
+  background-color: white;
+  width: 90%;
+  height: 43vh;
+  margin-top: 0.5em;
+  overflow-y: scroll;
+  padding: 1em;
+  overflow-x: hidden;
+}
+
+.TicketDiv {
+  width: 97%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.TicketInfo {
+  width: 88%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  color: black;
+}
+
+.TicketBtnsDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.approveBtn {
+  background-color: black;
+  color: rgba(0, 0, 0, 0.804);
+  margin: 0 1em;
+  border-radius: 5px;
+  width: 15%;
+  height: 3em;
+  color: white;
+}
+
+.PromoteToInspectorBtnPromoteToInspectorBtn {
+  background-color: black;
+  color: rgba(0, 0, 0, 0.804);
+  margin: 0 1em;
+  border-radius: 5px;
+  width: fit-content;
+  height: 3em;
+  color: white;
+}
+
+.distanceDiv {
+  display: flex;
+}
+
+.RejectBtn {
+  background-color: rgba(217, 18, 18, 0.847);
+  color: rgba(0, 0, 0, 0.804);
+  margin: 0 1em;
+  border-radius: 5px;
+  width: 15%;
+  height: 3em;
+  color: white;
+}
+
+.addNewLineBtnDiv {
+  margin-top: 0.5em;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.addNewLineBtnDiv input {
+  width: 30%;
+  height: 2.5em;
+}
+
+.editLineDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editLineCenterDiv {
+  background-color: #097c91;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.editLineX {
+  display: flex;
+  justify-content: end;
+  width: 90%;
+}
+
+.editLineX:hover {
+  cursor: pointer;
+}
+.lineDataInfoField {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.lineDataDiv {
+  width: 100%;
+}
+.lineDataInfoField h3,
+input,
+button {
+  width: 30%;
+  margin-left: 1em;
+}
+.lineDataInfoField input {
+  height: 3em;
+}
+.addNewLineBtnDiv {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.lineOverviewDiv {
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 60%;
+  margin-bottom: 1em;
+  height: 30vh;
+}
+
+.lineOverviewDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.titleOverviewDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainInfoOverviewDiv {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stationsOverviewDiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+
+.stationsOverviewScroll {
+  width: 100%;
+  height: 15vh;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.distancesOverviewDiv {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+}
+
+.distancesOverviewScroll {
+  width: 100%;
+  height: 15vh;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.stationsOverviewTitle {
+  background-color: #097c91;
+  color: white;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.stationsOverviewTitle h4 {
+  margin: 0;
+  padding: 0 0.5em;
+}
+.belowEditDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editLineName {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editLineName:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.stationAndDistancesEditDiv {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleEditStations {
+  width: 100%;
+  color: #097c91;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #097c91;
+}
+.titleEditStations h3 {
+  margin: 0;
+}
+.editLineStations {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  background-color: white;
+  height: 20vh;
+  margin-top: 1em;
+}
+.editLineStationsScroll {
+  width: 100%;
+  height: 16vh;
+  color: black;
+  overflow-y: scroll;
+}
+.editLineStationField {
+  border-bottom: 1px solid black;
+  padding-left: 1em;
+}
+.editLineStationField:hover {
+  background-color: #097c91;
+  color: white;
+  cursor: pointer;
+}
+.editInputDiv {
+  width: 50%;
+  height: 10vh;
+  background-color: #097c91;
+  border-bottom: 0.1em solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.editInputDiv input {
+  width: 40%;
+  height: 5vh;
+  padding-left: 1em;
+  font-size: large;
+}
+
+.editLineBtnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.editLineBtnDiv button {
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.847);
+  color: rgba(0, 0, 0, 0.804);
+  margin: 0 1em;
+  border-radius: 5px;
+  height: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addCreditDivMain {
+  width: 100%;
+  position: absolute;
+  top: 1;
+  left: 1;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addCreditXDiv {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+}
+
+.addCreditCenterDiv {
+  width: 50%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #097c91;
+}
+
+.addCreditCenterDiv button {
+  margin-top: 4em;
+}
