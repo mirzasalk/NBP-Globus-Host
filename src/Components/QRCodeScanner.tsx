@@ -185,7 +185,7 @@ const QRCodeScanner = () => {
           position: "relative",
           width: "90%",
           height: "auto",
-          margin-top: "2em"
+           marginTop: "2em"
         }}
       >
         <QrReader
