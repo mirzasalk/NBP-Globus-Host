@@ -431,7 +431,7 @@ const Home: React.FC = () => {
               setShowByTicketOrMyTicket(false);
             }}
           >
-            By Ticket
+            Buy Ticket
           </div>
           <div
             className="DivForchagePassengersView"
