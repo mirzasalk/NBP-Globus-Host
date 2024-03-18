@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import { QrReader } from 'react-qr-reader';
+import React, { useState } from "react";
+import { QrReader } from "react-qr-reader";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axiosInstance from "../api/axios-config";
-import {
-  UserData,
-  Penalty,
-} from '../Pages/inspectorPage/InspectorPage'; 
+import { UserData, Penalty } from "../Pages/inspectorPage/InspectorPage";
 
-const QRCodeScanner = (props) => {
-
+const QRCodeScanner = () => {
   const navigate = useNavigate();
   const [showWritePenaltyDiv, setShowWritePenaltyDiv] =
     useState<boolean>(false);
@@ -38,10 +34,10 @@ const QRCodeScanner = (props) => {
 
   const checkTicketWithScanner = async (ticketId: number) => {
     const jwtToken = localStorage.getItem("token");
-  
+
     try {
       console.log("Before API request");
-  
+
       const response = await axiosInstance.post(
         `/Tickets/CheckTicketWithScanner?ticketId=${ticketId}`,
         { ticketId },
@@ -52,32 +48,32 @@ const QRCodeScanner = (props) => {
           },
         }
       );
-  
 
       console.log("After API request");
-  
+
       if (response) {
         console.log("Response received");
-  
+
         const datumZaUporedivanje = new Date(response.data.ticket.toDate);
         const danasnjiDatum = new Date();
-  
+
         if (
           datumZaUporedivanje > danasnjiDatum &&
           response.data.ticket.isApproved === true
         ) {
           toast.success("Ticket is valid");
+          navigate("/inspectorPage");
         } else {
           toast.error("Ticket is not valid");
           console.log(response.data.user.id, user.id);
-  
+
           setPenalty({
             ...penalty,
             passengerID: response.data.user.id,
             inspectorId: user.id,
             dateOfPenalty: new Date(),
           });
-  
+
           setShowWritePenaltyDiv(true);
         }
       }
@@ -85,27 +81,24 @@ const QRCodeScanner = (props) => {
       console.error("Error in checkTicketWithScanner:", error);
     }
   };
-  
 
-  const [data, setData] = useState('No result');
+  const [data, setData] = useState("No result");
 
-  const handleScan = (result, error) => {
+  const handleScan = (result: any, error: any) => {
     if (result) {
       setData(result?.text);
 
       // Parse the URL to extract ticketId
       // const url = new URL(result.text);
       // const ticketId = parseInt(url.searchParams.get('ticketId'), 10); //if result has params
-      
-      const scannedTicketId = parseInt(result.text, 10);
 
+      const scannedTicketId = parseInt(result.text, 10);
 
       // Call checkTicketWithScanner with the extracted ticketId
       if (!isNaN(scannedTicketId)) {
-        
         checkTicketWithScanner(scannedTicketId);
       } else {
-        console.error('Invalid or missing ticketId in the QR code URL');
+        console.error("Invalid or missing ticketId in the QR code URL");
       }
     }
 
@@ -132,7 +125,6 @@ const QRCodeScanner = (props) => {
       if (response.data) {
         toast.success("The penalty has been recorded");
         console.log(response.data, "after recording");
-        getMyWrittenPenalties();
         setShowWritePenaltyDiv(false);
         navigate("/inspectorPage");
       }
@@ -141,30 +133,13 @@ const QRCodeScanner = (props) => {
       navigate("/inspectorPage");
     }
   };
-  
 
-  const getMyWrittenPenalties = async () => {
-    const jwtToken = localStorage.getItem("token");
-
-    try {
-      const response = await axiosInstance.get("Users/getMyWrittenPenalties", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${jwtToken}`,
-        },
-      });
-      if (response) {
-        setMyWrittenPenalties(response.data.reverse());
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
   return (
     <>
       <QrReader
         onResult={handleScan}
-        style={{ width: '100%' }}
+        constraints={{ facingMode: "environment" }} // Ovo je samo primjer, zamijenite s odgovarajućim postavkama
+
         // scanDelay={100}
       />
       <p>{data}</p>
