@@ -59,7 +59,6 @@ interface Transaction {
   credit: number;
 }
 const AdminPage: React.FC = () => {
-  
   const [unapprovedTickets, setUnapprovedTickets] = useState<Ticket[]>();
   const [transactions, setTransactions] = useState<Transaction[]>();
   const [transaction, setTransaction] = useState<Transaction>();
@@ -73,8 +72,7 @@ const AdminPage: React.FC = () => {
   const [searchUsersTerm, setSearchUsersTerm] = useState<string>("");
   const [searchInspectorsTerm, setSearchInspectorsTerm] = useState<string>("");
   const [searchLinesTerm, setSearchLinesTerm] = useState<string>("");
-  const [searchTransactionTerm, setSearchTransactionTerm] =
-    useState<string>("");
+
   const [showEditDistanceInput, setShowEditDistanceInput] =
     useState<boolean>(false);
   const [indexForEdit, setIndexForEdit] = useState<number>(-1);
@@ -483,9 +481,7 @@ const AdminPage: React.FC = () => {
     getAllTransactions();
   }, []);
 
-  useEffect(() => {
-
-  }, [transactions]);
+  useEffect(() => {}, [transactions]);
 
   return (
     <div id="adminPageMain">
@@ -783,15 +779,7 @@ const AdminPage: React.FC = () => {
             />
           </div>
         ) : changeAdminView == "Approve Transaction" ? (
-          <div className="addNewLineBtnDiv">
-            <input
-              type="text"
-              placeholder="Search"
-              onChange={(e) => {
-                setSearchTransactionTerm(e.target.value);
-              }}
-            />
-          </div>
+          <div className="addNewLineBtnDiv"></div>
         ) : changeAdminView == "Approve Tickets" ? (
           <div className="addNewLineBtnDiv">
             <input
@@ -919,14 +907,14 @@ const AdminPage: React.FC = () => {
                   return (
                     l.firstName
                       .toLowerCase()
-                      .includes(searchInspectorsTerm.toLowerCase()) ||
-                    l.id.toString().includes(searchInspectorsTerm) ||
+                      .includes(searchUsersTerm.toLowerCase()) ||
+                    l.id.toString().includes(searchUsersTerm) ||
                     l.lastName
                       .toLowerCase()
-                      .includes(searchInspectorsTerm.toLowerCase()) ||
+                      .includes(searchUsersTerm.toLowerCase()) ||
                     l.email
                       .toLowerCase()
-                      .includes(searchInspectorsTerm.toLowerCase())
+                      .includes(searchUsersTerm.toLowerCase())
                   );
                 })
                 .map((u) => {
