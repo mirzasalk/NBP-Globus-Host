@@ -131,7 +131,12 @@ const QRCodeScanner = () => {
     try {
       const response = await axiosInstance.post(
         "/Users/WritePenalty",
-        penalty,
+       {
+          inspectorId: user.id,
+          passengerID: penalty.passengerID,
+          dateOfPenalty: penalty.dateOfPenalty,
+          price: 2000,
+        } as Penalty,,
         {
           headers: {
             "Content-Type": "application/json",
@@ -161,7 +166,7 @@ const QRCodeScanner = () => {
       <QrReader
         onResult={handleScan}
         constraints={{ facingMode: "environment" }} // Ovo je samo primjer, zamijenite s odgovarajućim postavkama
-
+        
         // scanDelay={100}
       />
       <p>{data}</p>
