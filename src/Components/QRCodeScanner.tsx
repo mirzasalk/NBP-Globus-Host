@@ -6,6 +6,7 @@ import axiosInstance from "../api/axios-config";
 import { UserData, Penalty } from "../Pages/inspectorPage/InspectorPage";
 
 const QRCodeScanner = () => {
+    const [delayScan, setDelayScan] = useState<number>(500);
     const [userToBePenalized, setUserToBePenalized] = useState<UserData>({
          id: 0,
     firstName: "",
@@ -112,6 +113,7 @@ const QRCodeScanner = () => {
       // Call checkTicketWithScanner with the extracted ticketId
       if (!isNaN(scannedTicketId)) {
         checkTicketWithScanner(scannedTicketId);
+        setDelayScan(0);
       } else {
         console.error("Invalid or missing ticketId in the QR code URL",error);
       }
@@ -183,13 +185,13 @@ const QRCodeScanner = () => {
           position: "relative",
           width: "90%",
           height: "auto",
+          margin-top: "2em"
         }}
       >
         <QrReader
           onResult={handleScan}
           constraints={{ facingMode: "environment" }} // Ovo je samo primjer, zamijenite s odgovarajućim postavkama
-
-          // scanDelay={100}
+          scanDelay={delayScan}
         />
       </div>
       <p>{data}</p>
