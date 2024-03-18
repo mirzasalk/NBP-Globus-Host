@@ -6,6 +6,7 @@ import axiosInstance from "../api/axios-config";
 import { UserData, Penalty } from "../Pages/inspectorPage/InspectorPage";
 
 const QRCodeScanner = () => {
+    const [userToBePenalized, setUserToBePenalized] = useState<UserData>();
   const navigate = useNavigate();
   const [showWritePenaltyDiv, setShowWritePenaltyDiv] =
     useState<boolean>(false);
@@ -66,7 +67,7 @@ const QRCodeScanner = () => {
         } else {
           toast.error("Ticket is not valid");
           console.log(response.data.user.id, user.id);
-
+          setUserToBePenalized(response.data.user);
           setPenalty({
             ...penalty,
             passengerID: response.data.user.id,
@@ -136,7 +137,7 @@ const QRCodeScanner = () => {
           passengerID: penalty.passengerID,
           dateOfPenalty: penalty.dateOfPenalty,
           price: 2000,
-        } as Penalty,,
+        } as Penalty,
         {
           headers: {
             "Content-Type": "application/json",
@@ -163,12 +164,20 @@ const QRCodeScanner = () => {
   
   return (
     <>
-      <QrReader
-        onResult={handleScan}
-        constraints={{ facingMode: "environment" }} // Ovo je samo primjer, zamijenite s odgovarajućim postavkama
-        
-        // scanDelay={100}
-      />
+       <div
+        style={{
+          position: "relative",
+          width: "90%",
+          height: "auto",
+        }}
+      >
+        <QrReader
+          onResult={handleScan}
+          constraints={{ facingMode: "environment" }} // Ovo je samo primjer, zamijenite s odgovarajućim postavkama
+
+          // scanDelay={100}
+        />
+      </div>
       <p>{data}</p>
       {showWritePenaltyDiv ? (
         <div className="writePenaltyMainDiv">
@@ -185,7 +194,7 @@ const QRCodeScanner = () => {
             <h4>
               Passenger:
               <strong>
-                {user.firstName} {user.lastName}
+                {userToBePenalized.firstName} {userToBePenalized.lastName}
               </strong>
             </h4>
             <button onClick={WriteAPenalty}>Write a penalty</button>
