@@ -19,7 +19,7 @@ interface FormErrors {
 
 const AdminLogin: React.FC = () => {
 
-  const { setUser } = useContext(UserContext) ?? {};
+  const { setUser, setislogin } = useContext(UserContext) ?? {};
 
   const navigate = useNavigate();
   
@@ -83,7 +83,7 @@ const AdminLogin: React.FC = () => {
         } else {
           console.error("setUser is undefined");
         }
-
+        setislogin(true);
         toast.success("Log in successfull");
 
         localStorage.setItem("token", response.data.token);
