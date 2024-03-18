@@ -5,7 +5,7 @@ import axiosInstance from "../../api/axios-config";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import UserContext from "../../reactContext/UserContext";
-import QRCodeGenerator from "../../Components/QRCodeGenerator";
+
 
 
 interface FormData {
