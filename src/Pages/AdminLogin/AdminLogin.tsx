@@ -18,8 +18,15 @@ interface FormErrors {
 }
 
 const AdminLogin: React.FC = () => {
+ const context = useContext(UserContext);
+  if (!context) {
+    // Ako kontekst nije definisan, možete postupiti na odgovarajući način, na primer, vratiti null ili nešto drugo
+    return null;
+  }
 
-  const { setUser, setislogin } = useContext(UserContext) ?? {};
+  // Destrukturiranje podataka iz konteksta
+  const { setislogin } = context;
+  const { setUser } = useContext(UserContext) ?? {};
 
   const navigate = useNavigate();
   
@@ -83,7 +90,14 @@ const AdminLogin: React.FC = () => {
         } else {
           console.error("setUser is undefined");
         }
-        setislogin(true);
+         const context = useContext(UserContext);
+  if (!context) {
+    // Ako kontekst nije definisan, možete postupiti na odgovarajući način, na primer, vratiti null ili nešto drugo
+    return null;
+  }
+
+  // Destrukturiranje podataka iz konteksta
+  setislogin(true);
         toast.success("Log in successfull");
 
         localStorage.setItem("token", response.data.token);
