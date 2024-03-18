@@ -1,7 +1,7 @@
 import "./header.css";
-import { useEffect,useState } from "react";
+import { useEffect} from "react";
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import UserContext from "../../reactContext/UserContext";
 
 
