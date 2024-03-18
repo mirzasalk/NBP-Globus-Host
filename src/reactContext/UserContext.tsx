@@ -8,12 +8,13 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [user, setUser] = useState<User | null>(null);
-  
+  const [islogin, setislogin] = useState<boolean>(false);
 
   const contextValue: UserContextType = {
     user,
     setUser,
-    
+    islogin,
+    setislogin,
   };
 
   return (
@@ -22,3 +23,4 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({
 };
 
 export default UserContext;
+
