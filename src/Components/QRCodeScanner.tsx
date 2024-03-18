@@ -6,7 +6,21 @@ import axiosInstance from "../api/axios-config";
 import { UserData, Penalty } from "../Pages/inspectorPage/InspectorPage";
 
 const QRCodeScanner = () => {
-    const [userToBePenalized, setUserToBePenalized] = useState<UserData>();
+    const [userToBePenalized, setUserToBePenalized] = useState<UserData>({
+         id: 0,
+    firstName: "",
+    lastName: "",
+    email: "",
+    dateOfBirth: "",
+    password: "",
+    city: "",
+    address: "",
+    phoneNumber: "",
+    gender: "",
+    isApproved: false,
+    role: "",
+    credit: 0,
+    });
   const navigate = useNavigate();
   const [showWritePenaltyDiv, setShowWritePenaltyDiv] =
     useState<boolean>(false);
