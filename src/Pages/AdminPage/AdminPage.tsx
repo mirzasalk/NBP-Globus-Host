@@ -59,7 +59,7 @@ interface Transaction {
   credit: number;
 }
 const AdminPage: React.FC = () => {
-  const [addCreditValue, setAddCreditValue] = useState<number>(0);
+  
   const [unapprovedTickets, setUnapprovedTickets] = useState<Ticket[]>();
   const [transactions, setTransactions] = useState<Transaction[]>();
   const [transaction, setTransaction] = useState<Transaction>();
