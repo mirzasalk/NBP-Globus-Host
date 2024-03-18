@@ -32,7 +32,7 @@ const Header = () => {
         {islogin ? (
           // Ako je korisnik ulogovan, prikaži Logout link
           <div className="logIn-LogOutDiv">
-          <a href="/" onClick={handleLogout}>Logout</a>
+          <a href="/logIn" onClick={handleLogout}>Logout</a>
           </div>
         ) : (
           // Ako korisnik nije ulogovan, prikaži Login i Register linkove
