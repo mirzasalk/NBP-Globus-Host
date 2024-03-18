@@ -19,4 +19,6 @@ export interface User {
 export interface UserContextType {
   user: User | null;
   setUser: Dispatch<SetStateAction<User | null>>;
+  islogin: boolean; // Dodato svojstvo islogin
+  setislogin: Dispatch<SetStateAction<boolean>>; // Dodata funkcija za postavljanje islogin-a
 }
