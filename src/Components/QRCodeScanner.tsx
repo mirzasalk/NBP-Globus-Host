@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState,useEffect } from "react";
 import { QrReader } from "react-qr-reader";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -98,7 +98,7 @@ const QRCodeScanner = () => {
       if (!isNaN(scannedTicketId)) {
         checkTicketWithScanner(scannedTicketId);
       } else {
-        console.error("Invalid or missing ticketId in the QR code URL");
+        console.error("Invalid or missing ticketId in the QR code URL",error);
       }
     }
 
@@ -107,6 +107,24 @@ const QRCodeScanner = () => {
     // }
   };
 
+ const getUserById = async () => {
+    const jwtToken = localStorage.getItem("token");
+
+    try {
+      const response = await axiosInstance.get("Users/getUserById", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${jwtToken}`,
+        },
+      });
+      if (response) {
+        setUser(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   const WriteAPenalty = async () => {
     const jwtToken = localStorage.getItem("token");
     console.log(penalty, "befor Recording");
@@ -134,6 +152,10 @@ const QRCodeScanner = () => {
     }
   };
 
+  useEffect(() => {
+    getUserById();
+  }, []);
+  
   return (
     <>
       <QrReader
