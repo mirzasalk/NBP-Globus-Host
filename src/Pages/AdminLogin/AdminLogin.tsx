@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import UserContext from "../../reactContext/UserContext";
 
-
 interface FormData {
   Email: string;
   Password: string;
@@ -18,7 +17,7 @@ interface FormErrors {
 }
 
 const AdminLogin: React.FC = () => {
- const context = useContext(UserContext);
+  const context = useContext(UserContext);
   if (!context) {
     // Ako kontekst nije definisan, možete postupiti na odgovarajući način, na primer, vratiti null ili nešto drugo
     return null;
@@ -26,10 +25,9 @@ const AdminLogin: React.FC = () => {
 
   // Destrukturiranje podataka iz konteksta
   const { setislogin } = context;
-  const { setUser } = useContext(UserContext) ?? {};
 
   const navigate = useNavigate();
-  
+
   const [formData, setFormData] = useState<FormData>({
     Email: "",
     Password: "",
@@ -85,23 +83,11 @@ const AdminLogin: React.FC = () => {
           },
         });
 
-        if (setUser) {
-          setUser(response.data.data);
-        } else {
-          console.error("setUser is undefined");
-        }
-         const context = useContext(UserContext);
-  if (!context) {
-    // Ako kontekst nije definisan, možete postupiti na odgovarajući način, na primer, vratiti null ili nešto drugo
-    return null;
-  }
-
-  // Destrukturiranje podataka iz konteksta
-  setislogin(true);
+        setislogin(true);
         toast.success("Log in successfull");
 
         localStorage.setItem("token", response.data.token);
-       
+
         navigate("/adminPage");
       } catch (error: any) {
         toast.error(error.response.data.Message);
@@ -111,9 +97,9 @@ const AdminLogin: React.FC = () => {
     }
   };
 
- useEffect(()=>{
-  localStorage.clear();
- },[]);
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
   return (
     <div id="adminLogInMain">
@@ -155,3 +141,4 @@ const AdminLogin: React.FC = () => {
 };
 
 export default AdminLogin;
+
