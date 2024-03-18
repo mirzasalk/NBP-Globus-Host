@@ -38,7 +38,19 @@ const InspectorPage: React.FC = () => {
   const [myWrittenPenalties, setMyWrittenPenalties] = useState<Penalty[]>();
   const [showWritePenaltyDiv, setShowWritePenaltyDiv] =
     useState<boolean>(false);
-  const [userToBePenalized, setUserToBePenalized] = useState<UserData>();
+  const [userToBePenalized, setUserToBePenalized] = useState<UserData>({id: 0,
+    firstName: "",
+    lastName: "",
+    email: "",
+    dateOfBirth: "",
+    password: "",
+    city: "",
+    address: "",
+    phoneNumber: "",
+    gender: "",
+    isApproved: false,
+    role: "",
+    credit: 0,});
 
   const [penalty, setPenalty] = useState<Penalty>({
     inspectorId: 0,
