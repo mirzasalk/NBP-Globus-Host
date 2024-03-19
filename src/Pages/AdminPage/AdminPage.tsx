@@ -399,12 +399,12 @@ const AdminPage: React.FC = () => {
     } else {
       let p = "";
       newLine.Name == ""
-        ? (p = "Unesite ime linije")
+        ? (p = "Enter line name")
         : newLine.Stations.length < 2
-        ? (p = "Uneli ste manje od dve stanice")
+        ? (p = "You must enter more than 2 stations!")
         : newLine.Distance.length != newLine.Stations.length
-        ? (p = "Broj stanica i distanci nije uskladjen")
-        : (p = "Uneli ste pogresne podatke");
+        ? (p = "The number of stations and distance must be equal!")
+        : (p = "Invalid data entered!");
 
       toast.error(p);
     }
