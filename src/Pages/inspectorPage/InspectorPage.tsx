@@ -238,7 +238,7 @@ const InspectorPage: React.FC = () => {
               {myWrittenPenalties?.map((p) => {
                 return (
                   <div className="penaltyDiv">
-                    <h3>{p.inspectorId}</h3>
+                     <h3>{user.firstName} {user.firstName}</h3>
                     <h3>{p.passengerID}</h3>
                     <h3>{p.dateOfPenalty?.toString()}</h3>
                     <h3>{p.price}</h3>
